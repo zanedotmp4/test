@@ -21,7 +21,18 @@ setInterval(function(){
         alert("Game over. Score: "+(counter-1));
         character.style.top = 100 + "px";
         counter=0;
+        
     }
+        let speedup=1;
+        var totalspeed;
+        if(counter%5==0){
+            block.animation.time= block.animation.time-0.1;
+            totalspeed++;
+        }
+        
+        if(totalspeed>10){
+             block.animation.time=0.7;
+        }
 },10);
 
 function jump(){
@@ -39,8 +50,5 @@ function jump(){
         }
         jumpCount++;
     },10);
-    function speedup(){
-        if(counter%10==0){
-            
-        }
+
 }
