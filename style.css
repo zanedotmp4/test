@@ -3,8 +3,8 @@
     margin: 0;
 }
 #game{
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 600px;
     border: 1px solid black;
     margin: auto;
     overflow: hidden;
@@ -26,8 +26,8 @@
     height: 150px;
     background-color: white;
     position: relative;
-    left: 400px;
-    top: -500px;
+    left: 500px;
+    top: -600px;
     animation: block 2s infinite linear;
 }
 #character{
