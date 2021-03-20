@@ -12,7 +12,7 @@ hole.addEventListener('animationiteration', () => {
 setInterval(function(){
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     if(jumping==0){
-        character.style.top = (characterTop+3)+"px";
+        character.style.top = (characterTop+2.5)+"px";
     }
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     var holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
@@ -30,7 +30,7 @@ function jump(){
     var jumpInterval = setInterval(function(){
         var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
         if((characterTop>6)&&(jumpCount<15)){
-            character.style.top = (characterTop-5)+"px";
+            character.style.top = (characterTop-3)+"px";
         }
         if(jumpCount>20){
             clearInterval(jumpInterval);
@@ -39,4 +39,8 @@ function jump(){
         }
         jumpCount++;
     },10);
+    function speedup(){
+        if(counter%10==0){
+            
+        }
 }
